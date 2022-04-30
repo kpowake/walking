@@ -40,4 +40,4 @@ stepsapp_android_df["距離"] = stepsapp_android_df["距離"].astype("int")
 
 df = pd.concat([apple_df, google_df, stepsapp_ios_df, stepsapp_android_df]).groupby(["日付"]).max().reset_index()
 
-print(df)
+df.to_csv("walking.csv", index=False)
